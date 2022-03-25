@@ -14,23 +14,23 @@ public class FileReader_BufferedReader {
 		
 		try {
 			fr = new FileReader(path);//Instanciar o "fr" com o caminho do arquivo "path"
-			br = new BufferedReader(fr);//Instanciar o "br" recebendo o "fr" como arcumento//"OBS: deixa mais flexivel o sistema de leitura do arquivo"
-			String line = br.readLine();// "line" ele ira ler uma linha do arquivo,// se essa linha estiver no final ele ira retornar "null"assim,
-			while(line != null) {// criando um "while" e tester "line != null"
+			br = new BufferedReader(fr);//Instanciar o "br" recebendo o "fr" como arcumento. "OBS: deixa mais flexivel o sistema de leitura do arquivo"
+			String line = br.readLine();// "line" ele ira ler uma linha do arquivo, se essa linha estiver no final ele ira retornar "null"
+			while(line != null) {// criando um "while"p/ tester "line != null"
 				System.out.println(line);
-				line = br.readLine();// 
+				line = br.readLine();// imprimir a nossa linha
 			} 
 		}
 		catch(IOException e) {
-			System.out.println("Error: " + e.getMessage());//P/ informar que deu erro
+			System.out.println("Error: " + e.getMessage());// Para informar que deu erro
 		}
 		finally {
 			try{
-				if(br != null) {//Para fechar as duas String
-				br.close(); //P/ fechar a String "br"
+				if(br != null) {//if = fechar as duas String
+					br.close(); //Para fechar a String "br"
 			}
 			if(fr != null) {
-				fr.close(); //P/ fechar a String "fr"
+				fr.close(); //Para fechar a String "fr"
 			}
 		}
 			catch(IOException e){//Para tradar e analisar a exceção do fechamento das String

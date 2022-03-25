@@ -13,7 +13,7 @@ public class FileWriter_BufferedWriter {
 		
 		try(BufferedWriter bw = new BufferedWriter(new FileWriter(path,true))){ // Declarar o "BW" recebendo o "FW" com o argumento "path(caminho de onde fica o arquivo)". 
 			for(String line : lines) { // Criar um "for" para cada "line" do vetor "lines"(para cada linha do programa, uma linha no arquivo.
-				bw.write(line); // Escrever a linha no arquivo 
+				bw.write(line); // Escrever a linha no arquivo. 
 				bw.newLine(); // Quebra de linha.
 			}
 		}

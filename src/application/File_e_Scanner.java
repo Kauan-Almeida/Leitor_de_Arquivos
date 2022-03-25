@@ -13,26 +13,26 @@ public class File_e_Scanner {
 		Scanner sc = null;
 
 		try {
-			//Instanciando o Scanner com o arcumento "file".
+			// Instanciando o Scanner com o argumento "file".
 			sc = new Scanner(file);
 			while(sc.hasNextLine()){
 				/*"hasNextLine"
-				 * P/ testar se ainda ha uma nova linha no arquivo.
+				 * Para testar se ainda ha uma nova linha no arquivo.
 				 * "sc.nextLine()" p/ ler a nova linha do arquivo*/
 				System.out.println(sc.nextLine());	
 			}
 		}
 		catch(IOException e) {
-			//Se acontecer alguma exceção, ela sera tradada mostrando a menssagem de "Error"
+			// Se acontecer alguma exceção, ela será tratada, mostrando a menssagem de "Error".
 			System.out.print("Error: " + e.getMessage());
 		}
 		finally {
 			if(sc != null) {
 				sc.close();
-				/*Fechar o Scanner: sc.close() dentro do finall,
-				 *recurso será fechado caso o try der certo ou ñ,
-				 *criando um "if"pois:
-				 *caso o bloco try de erro, o "sc" ficaria valendo "null" e ñ "file"
+				/*Fechar o Scanner: sc.close() dentro do finally,
+				 *o recurso será fechado caso o try der certo ou ñ,
+				 *criar um "if" pois:
+				 *caso o bloco try der erro, o "sc" ficaria valendo "null" e ñ "file".
 				 */
 			}
 		}
